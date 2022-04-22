@@ -28,7 +28,7 @@ DELIMITER $$
 
 create procedure CantidadMascotas (in idAmo int) 
 begin
-	select count(mascotas) from mascotas where id_mascota in (select id_mascota where idAmo = id_dueño);
+	select count(id_mascotas) from mascotas where id_mascota in (select id_mascota where idAmo = id_dueño);
 end $$
 
 DELIMITER ;
