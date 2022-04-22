@@ -43,7 +43,7 @@ begin
 	declare respuesta bool default false;
 	if((select peso from mascotas where id_mascota = idMascotaPedida) > 15) then
     set respuesta = true;
-    
+    end if;
     select respuesta;
     
 end $$
